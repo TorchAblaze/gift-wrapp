@@ -1,2 +1,9 @@
 <h1>Gifts</h1>
-<p>Add a Gift!</p>
+
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <%= post.title %>
+    </>
+  <% end %>
+</ul>
