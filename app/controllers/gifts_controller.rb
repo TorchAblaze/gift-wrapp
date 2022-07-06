@@ -1,5 +1,9 @@
 class GiftsController < ApplicationController
   def index
-    @posts = Post.all
+    @gifts = Gift.where(purchased: false)
+  end
+
+  def purchased
+    @gifts = Gift.where(purchased: true)
   end
 end
