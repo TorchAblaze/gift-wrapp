@@ -1,0 +1,13 @@
+<h1>Purchased Gifts</h1>
+
+<% @gifts.each do |gift| %>
+  <div>
+  <p>
+    Gift idea: 
+      <span><%= gift.name %></span>
+    For:
+    <span><%= gift.person.name %></span>
+  </p>
+  </div>
+<% end %>
+
