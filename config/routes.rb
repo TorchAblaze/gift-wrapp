@@ -13,6 +13,13 @@ Rails.application.routes.draw do
 
   get "/gifts", to: "gifts#index"
   get "/purchased", to: "gifts#purchased"
+  get "/gifts/add", to: "gifts#add"
+  post "/gifts", to: "gifts#create"
+
+  get "/people", to: "people#index"
+  # post    "/people", to: "people#create"
+  # put     "/people", to: "people#update"
+  # delete  "/people", to: "people#delete"
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
