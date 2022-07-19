@@ -17,9 +17,11 @@ Rails.application.routes.draw do
   post "/gifts", to: "gifts#create"
 
   get "/people", to: "people#index"
-  # post    "/people", to: "people#create"
-  # put     "/people", to: "people#update"
-  # delete  "/people", to: "people#delete"
+  post "/people", to: "people#create"
+  put "/people", to: "people#update"
+  delete "/people", to: "people#delete"
+
+  # TODO add people/add
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
