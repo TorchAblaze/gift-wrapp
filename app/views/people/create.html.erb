@@ -1,0 +1,10 @@
+<h1>Add a loved one deserving of a super awesome gift!</h1>
+
+<%= flash[:error]%>
+
+<%= form_with url: "/people", method: :post do |form| %>
+  <%= form.label :name, "A person's name" %>
+  <%= form.text_field :name %>
+
+  <%= form.submit "Add" %>
+<% end %>
