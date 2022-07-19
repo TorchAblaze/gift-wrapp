@@ -4,7 +4,13 @@ class PeopleController < ApplicationController
   end
 
   def create
-
+    @person = Person.new(name: params[:name])
+    if @person.save
+      redirect_to people_path
+    else
+      flash[:error] = @person.errors.first.full_message
+      render "create", status: :unprocessable_entity
+    end
   end
 
   def put
