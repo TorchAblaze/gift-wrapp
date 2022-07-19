@@ -1,0 +1,11 @@
+<h1>Loved ones deserving of super awesome gifts</h1>
+
+<% @people.each do |person| %>
+  <div>
+    <p>
+      <span><%= person.name %> - </span>
+    last updated:
+      <span><%= person.updated_at %></span>
+    </p>
+  </div>
+<% end %>
