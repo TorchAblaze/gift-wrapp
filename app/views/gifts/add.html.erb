@@ -1,6 +1,14 @@
 <h1>Add a gift idea!</h1>
 
-<%= flash[:error] %>
+<% if @gift.errors.any? %>
+  <ul>
+  <% @gift.errors.each do |error| %>
+    <li>
+      <%= "Error: #{error.full_message}"%>
+    </li>
+  <% end %>  
+  </ul>
+<% end %>
 
 <%# https://guides.rubyonrails.org/form_helpers.html %>
 
@@ -9,6 +17,8 @@
   <%= form.text_field :name %>
   <%= form.label :price, "Price:" %>
   <%= form.text_field :price %>
+
+  <%= form.select :person_id, @people %>
 
   <%= form.submit "Add gift" %>
 <% end %>
