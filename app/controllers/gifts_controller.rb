@@ -1,4 +1,6 @@
 class GiftsController < ApplicationController
+  before_action :set_people, only: %i[ add create ]
+  
   def index
     @gifts = Gift.where(purchased: false)
   end
@@ -8,9 +10,10 @@ class GiftsController < ApplicationController
   end
 
   def add
-    
+    @gift = Gift.new()
   end
 
+  # some_array << new_item
 
   # Started POST "/gifts" for 127.0.0.1 at 2022-07-12 17:54:13 -0700
   # Processing by GiftsController#create as TURBO_STREAM
@@ -26,13 +29,16 @@ class GiftsController < ApplicationController
   # Client.new(name: "Client Name")
 
   def create
-    @gift = Gift.new(name: params[:name], price: params[:price])
+    @gift = Gift.new(name: params[:name], price: params[:price], person_id: params[:person_id])
     if @gift.save
       redirect_to gifts_path
     else
-      flash[:error] = @gift.errors.first.full_message
       render "add", status: :unprocessable_entity
     end
+  end
+
+  def set_people
+    @people = Person.all.map { |p| [p.name, p.id] }
   end
     
 end
