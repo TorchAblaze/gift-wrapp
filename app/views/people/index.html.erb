@@ -3,7 +3,7 @@
 <% @people.each do |person| %>
   <div>
     <p>
-      <span><%= person.name %> - </span>
+      <span><%= link_to(person.name, people_show_path(person.id)) %> - </span>
     last updated:
       <span><%= person.updated_at %></span>
     </p>
