@@ -13,6 +13,11 @@ class PeopleController < ApplicationController
     end
   end
 
+  def show
+    @person = Person.find(params[:id])
+    @gifts = Gift.where(person_id: params[:id])
+  end
+
   def put
 
   end
