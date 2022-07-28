@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_02_014301) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_27_010741) do
   create_table "gifts", force: :cascade do |t|
     t.float "price"
     t.string "name", null: false
@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_02_014301) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "person_id", null: false
+    t.string "url"
   end
 
   create_table "people", force: :cascade do |t|
