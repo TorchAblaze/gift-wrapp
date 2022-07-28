@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   get "/people", to: "people#index"
   get "/people/create", to: "people#create"
+  get "/people/:id", to: "people#show", as: :people_show
   post "/people", to: "people#create"
   put "/people", to: "people#update"
   delete "/people", to: "people#delete"
