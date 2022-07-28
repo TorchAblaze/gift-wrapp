@@ -29,12 +29,16 @@ class GiftsController < ApplicationController
   # Client.new(name: "Client Name")
 
   def create
-    @gift = Gift.new(name: params[:name], price: params[:price], person_id: params[:person_id])
+    @gift = Gift.new(gift_params)
     if @gift.save
       redirect_to gifts_path
     else
       render "add", status: :unprocessable_entity
     end
+  end
+
+  def gift_params
+    params[:gift].permit(:name, :price, :url, :person_id)
   end
 
   def set_people
