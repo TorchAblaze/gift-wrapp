@@ -12,11 +12,13 @@
 
 <%# https://guides.rubyonrails.org/form_helpers.html %>
 
-<%= form_with url: "/gifts", method: :post do |form| %>
+<%= form_with model: @gift do |form| %>
   <%= form.label :name, "Gift name:" %>
   <%= form.text_field :name %>
   <%= form.label :price, "Price:" %>
   <%= form.text_field :price %>
+  <%= form.label :url, "Gift URL" %>
+  <%= form.text_field :url %>
 
   <%= form.select :person_id, @people %>
 
