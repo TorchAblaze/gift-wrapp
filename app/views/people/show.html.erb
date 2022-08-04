@@ -1,5 +1,9 @@
 <h1><%= @person.name %></h1>
 
+<div>
+  <%= link_to "Add a gift idea", gifts_add_path %>
+</div>
+
 <% @gifts.each do |gift| %>
   <div>
     <ul> 
