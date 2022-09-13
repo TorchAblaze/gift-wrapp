@@ -1,5 +1,6 @@
 class GiftsController < ApplicationController
-  before_action :set_people, only: %i[ add create ]
+  before_action :set_people, only: %i[ new create edit update ]
+  before_action :set_gift, only: %i[ edit update show ]
   
   def index
     @gifts = Gift.where(purchased: false)
@@ -9,7 +10,7 @@ class GiftsController < ApplicationController
     @gifts = Gift.where(purchased: true)
   end
 
-  def add
+  def new
     @gift = Gift.new()
   end
 
@@ -37,12 +38,30 @@ class GiftsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @gift.update(gift_params)
+      redirect_to gifts_path
+    else
+      render "edit", status: :unprocessable_entity
+    end
+  end
+
+  def show
+  end
+
   def gift_params
     params[:gift].permit(:name, :price, :url, :person_id)
   end
 
   def set_people
     @people = Person.all.map { |p| [p.name, p.id] }
+  end
+
+  def set_gift
+    @gift = Gift.find(params.permit(:id)[:id])
   end
     
 end
