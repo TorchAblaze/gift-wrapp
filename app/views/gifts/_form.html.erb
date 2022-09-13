@@ -1,0 +1,35 @@
+<% if gift.errors.any? %>
+  <ul>
+  <% gift.errors.each do |error| %>
+    <li>
+      <%= "Error: #{error.full_message}"%>
+    </li>
+  <% end %>  
+  </ul>
+<% end %>
+
+<%# https://guides.rubyonrails.org/form_helpers.html %>
+
+<%= form_with model: gift do |form| %>
+  <div>
+    <%= form.select :person_id, @people %>
+  </div>
+  <br>
+  <div>
+    <%= form.label :name, "Gift name:" %>
+    <%= form.text_field :name %>
+  </div>
+  <br>
+  <div>
+    <%= form.label :price, "Price:" %>
+    <%= form.text_field :price %>
+  </div>
+  <br>
+  <div> 
+    <%= form.label :url, "Gift URL" %>
+    <%= form.text_field :url %>
+  </div>
+  <br>
+  
+  <%= form.submit "Save" %>
+<% end %>
