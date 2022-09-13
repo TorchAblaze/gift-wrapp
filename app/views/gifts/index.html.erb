@@ -1,6 +1,6 @@
 <h1>Gifts</h1>
 
-<%= link_to "Add gift", gifts_add_path %>
+<%= link_to "Add gift", new_gift_path %>
 
 <% @gifts.each do |gift| %>
   <div>
@@ -8,6 +8,8 @@
       <span><%= gift.name %></span>
     for
       <span><%= gift.person.name %></span>
+      <span><%= link_to "Edit", edit_gift_path(gift) %></span>
     </p>
+    
   </div>  
 <% end %>
