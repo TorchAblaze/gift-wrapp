@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @giftee %>
+
+<div>
+  <%= link_to "Edit this giftee", edit_giftee_path(@giftee) %> |
+  <%= link_to "Back to giftees", giftees_path %>
+
+  <%= button_to "Destroy this giftee", @giftee, method: :delete %>
+</div>

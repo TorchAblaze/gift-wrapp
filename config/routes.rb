@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :giftees
   root "gifts#index"
 
   resources :posts
@@ -11,17 +12,19 @@ Rails.application.routes.draw do
   # get "/search/:search_value", to: "posts#search"
   # get "/special", to: "gifts#dummy"
 
-  get "/gifts", to: "gifts#index"
+  # get "/gifts", to: "gifts#index"
   get "/purchased", to: "gifts#purchased"
-  get "/gifts/add", to: "gifts#add"
-  post "/gifts", to: "gifts#create"
+  
+  resources :gifts
 
-  get "/people", to: "people#index"
-  get "/people/create", to: "people#create"
-  get "/people/:id", to: "people#show", as: :people_show
-  post "/people", to: "people#create"
-  put "/people", to: "people#update"
-  delete "/people", to: "people#delete"
+  resources :giftee
+
+  # get "/people", to: "people#index"
+  # get "/people/create", to: "people#create"
+  # get "/people/:id", to: "people#show", as: :people_show
+  # post "/people", to: "people#create"
+  # put "/people", to: "people#update"
+  # delete "/people", to: "people#delete"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_27_010741) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_01_230840) do
+  create_table "giftees", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "phone_number"
+    t.string "email"
+    t.string "street_1"
+    t.string "street_2"
+    t.string "city"
+    t.string "state"
+    t.string "zipcode"
+    t.string "country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "gifts", force: :cascade do |t|
     t.float "price"
     t.string "name", null: false
@@ -23,13 +37,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_27_010741) do
 
   create_table "people", force: :cascade do |t|
     t.string "name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
