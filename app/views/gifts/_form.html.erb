@@ -12,7 +12,7 @@
 
 <%= form_with model: gift do |form| %>
   <div class="mb-3">
-    <%= form.select :person_id, @people, class: "form-control" %>
+    <%= form.select :person_id, @people %>
   </div>
   <br>
   <div class="mb-3">
@@ -31,5 +31,5 @@
   </div>
   <br>
   
-  <%= form.submit class: "btn btn-primary"%>
+  <%= form.submit class: "btn btn-outline-danger"%>
 <% end %>
