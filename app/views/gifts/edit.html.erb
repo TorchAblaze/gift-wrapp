@@ -1,3 +1,10 @@
 <h1>Edit gift</h1>
 
 <%= render partial: "form", locals: { gift: @gift } %>
+
+<br>
+
+<div>
+  <%= link_to "Show this gift", @gift %> |
+  <%= link_to "Back to gifts", gifts_path %>
+</div>
