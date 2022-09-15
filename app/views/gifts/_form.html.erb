@@ -11,25 +11,25 @@
 <%# https://guides.rubyonrails.org/form_helpers.html %>
 
 <%= form_with model: gift do |form| %>
-  <div>
-    <%= form.select :person_id, @people %>
+  <div class="mb-3">
+    <%= form.select :person_id, @people, class: "form-control" %>
   </div>
   <br>
-  <div>
-    <%= form.label :name, "Gift name:" %>
-    <%= form.text_field :name %>
+  <div class="mb-3">
+    <%= form.label :name, "Gift name:", class: "form-label" %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
   <br>
-  <div>
+  <div class="mb-3">
     <%= form.label :price, "Price:" %>
-    <%= form.text_field :price %>
+    <%= form.text_field :price, class: "form-control" %>
   </div>
   <br>
-  <div> 
-    <%= form.label :url, "Gift URL" %>
-    <%= form.text_field :url %>
+  <div class="mb-3"> 
+    <%= form.label :url, "Gift URL", class: "form-label" %>
+    <%= form.text_field :url, class: "form-control" %>
   </div>
   <br>
   
-  <%= form.submit "Save" %>
+  <%= form.submit class: "btn btn-primary"%>
 <% end %>
