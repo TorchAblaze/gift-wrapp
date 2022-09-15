@@ -3,12 +3,21 @@
 <h1>Giftees</h1>
 
 <div id="giftees">
-  <% @giftees.each do |giftee| %>
-    <%= render giftee %>
-    <p>
-      <%= link_to "Show this giftee", giftee %>
-    </p>
+  <% if !@giftees.empty? %>
+    <% @giftees.each do |giftee| %>
+      <%= render giftee %>
+      <p>
+        <%= link_to "Show this giftee", giftee %>
+      </p>
+    <% end %>
+  <% else %>
+    <p>No giftees to go shopping for yet! Add a giftee to get started.</p>
   <% end %>
 </div>
 
-<%= link_to "New giftee", new_giftee_path %>
+<br>
+
+<div class="row">
+  <%= link_to "Add a gift", new_gift_path, class: "btn btn-outline-danger col-md-4" %>
+  <%= link_to "Add a giftee", new_giftee_path, class: "btn btn-outline-secondary col-md-4 offset-md-4" %>
+</div>
