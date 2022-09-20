@@ -1,9 +1,0 @@
-<h1>Loved ones deserving of super awesome gifts</h1>
-
-<% @people.each do |person| %>
-  <div>
-    <p>
-      <span><%= link_to(person.name, people_show_path(person.id)) %></span>
-    </p>
-  </div>
-<% end %>
