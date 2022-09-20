@@ -31,10 +31,15 @@ class GiftsController < ApplicationController
 
   def create
     @gift = Gift.new(gift_params)
-    if @gift.save
-      redirect_to gifts_path
-    else
-      render "add", status: :unprocessable_entity
+
+    respond_to do |format|
+      if @gift.save
+        format.html { redirect_to gift_url(@gift), notice: "Gift was successfully created." }
+        format.json { render :show, status: :created, location: @gift }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @gift.errors, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -42,10 +47,14 @@ class GiftsController < ApplicationController
   end
 
   def update
-    if @gift.update(gift_params)
-      redirect_to gifts_path
-    else
-      render "edit", status: :unprocessable_entity
+    respond_to do |format|
+      if @gift.update(gift_params)
+        format.html { redirect_to gifts_url(@gift), notice: "Gift was successfully updated." }
+        format.json { render :show, status: :ok, location: @gfit }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+        format.json { render json: @gift.errors, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -53,11 +62,11 @@ class GiftsController < ApplicationController
   end
 
   def gift_params
-    params[:gift].permit(:name, :price, :url, :person_id)
+    params[:gift].permit(:name, :price, :url, :giftee_id)
   end
 
   def set_people
-    @people = Person.all.map { |p| [p.name, p.id] }
+    @people = Giftee.all.map { |p| [p.name, p.id] }
   end
 
   def set_gift
