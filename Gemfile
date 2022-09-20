@@ -50,6 +50,8 @@ gem "bootsnap", require: false
 
 # Add bootstrap
 gem 'bootstrap', '~> 5.2.0'
+gem 'jquery-rails'
+gem 'popper_js', '~> 2.11.5'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
