@@ -17,7 +17,7 @@ class GifteesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create giftee" do
     assert_difference("Giftee.count") do
-      post giftees_url, params: { giftee: {  } }
+      post giftees_url, params: { giftee: { name: "Test" } }
     end
 
     assert_redirected_to giftee_url(Giftee.last)
@@ -34,7 +34,7 @@ class GifteesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update giftee" do
-    patch giftee_url(@giftee), params: { giftee: {  } }
+    patch giftee_url(@giftee), params: { giftee: { name: "Test" } }
     assert_redirected_to giftee_url(@giftee)
   end
 
