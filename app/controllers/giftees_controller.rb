@@ -65,6 +65,6 @@ class GifteesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def giftee_params
-      params.fetch(:giftee, {})
+      params.fetch(:giftee).permit(:name)
     end
 end
