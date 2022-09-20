@@ -1,8 +1,8 @@
 class Gift < ApplicationRecord
-  belongs_to :person
+  belongs_to :giftee
 
   validates :name, presence: true
-  validates :person, presence: true
+  validates :giftee, presence: true
 
   def formatted_price
     rounded_price = price.to_d.round(2).to_f
