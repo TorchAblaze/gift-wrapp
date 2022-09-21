@@ -28,5 +28,35 @@ a {
 }
 
 a:hover {
+  color: #dc3545;
+  text-decoration: underline;
+}
+
+.edit {
+  color: rgb(146, 145, 145);
+}
+
+.edit:hover {
+  color: rgb(146, 145, 145);
+  text-decoration: underline;
+}
+
+span.edit {
+  margin: 1rem;
+}
+
+.nav {
+  height: 100%;
+  width: fit-content;
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.nav-link {
   color: black;
 }
