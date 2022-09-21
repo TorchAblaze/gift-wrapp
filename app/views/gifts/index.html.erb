@@ -1,6 +1,5 @@
 <h1>Gifts</h1>
 
-<br>
 <% if !@gifts.empty? %>
   <% @gifts.each do |gift| %>
     <div>
@@ -8,7 +7,7 @@
         <span><%= link_to gift.name, gift_path(gift) %></span>
       for
         <span><%= gift.giftee.name %></span>
-        <span><%= link_to "Edit", edit_gift_path(gift), class: "edit" %></span>
+        <span class="edit"><%= link_to "Edit", edit_gift_path(gift), class: "edit" %></span>
       </p>
       
     </div>  
