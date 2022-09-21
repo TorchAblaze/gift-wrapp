@@ -1,13 +1,16 @@
 <h1>Purchased Gifts</h1>
 
-<% @gifts.each do |gift| %>
-  <div>
-  <p>
-    Gift idea: 
-      <span><%= gift.name %></span>
-    For:
-    <span><%= gift.giftee.name %></span>
-  </p>
-  </div>
+<br>
+<% if !@gifts.empty? %>
+  <% @gifts.each do |gift| %>
+    <div>
+      <p>
+        Gift: 
+          <span><%= link_to gift.name, gift_path(gift) %></span>
+        for
+        <span><%= link_to gift.giftee.name, giftee_path(gift.giftee.id) %></span>
+      </p>
+    </div>
+  <% end %>
 <% end %>
 
