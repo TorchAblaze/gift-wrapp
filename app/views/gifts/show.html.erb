@@ -1,1 +1,5 @@
-<h1><%= @gift.name %></h1>
+<% if @gift.url != "" %>
+  <h1><a href="<%= @gift.url %>" target="_blank"><%= @gift.name %></a></h1>
+<% else %>
+  <h1><%= @gift.name %></h1>
+<% end %>
