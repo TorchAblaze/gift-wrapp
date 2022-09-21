@@ -5,10 +5,10 @@
   <% @gifts.each do |gift| %>
     <div>
       <p>
-        <span><%= gift.name %></span>
+        <span><%= link_to gift.name, gift_path(gift) %></span>
       for
         <span><%= gift.giftee.name %></span>
-        <span><%= link_to "Edit", edit_gift_path(gift) %></span>
+        <span><%= link_to "Edit", edit_gift_path(gift), class: "edit" %></span>
       </p>
       
     </div>  
