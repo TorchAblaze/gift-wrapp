@@ -60,3 +60,15 @@ span.edit {
 .nav-link {
   color: black;
 }
+
+.nav-link:hover {
+  color: #dc3545;
+}
+
+.nav-pills .nav-link.active {
+  color: #dc3545;
+  border-radius: 0%;
+  border-left: .2rem solid #dc3545;
+  height: 2.5rem;
+  background-color: white;
+}
