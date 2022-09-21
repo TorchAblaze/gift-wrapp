@@ -7,7 +7,7 @@
     <% @giftees.each do |giftee| %>
       <%= render giftee %>
       <p>
-        <%= link_to "Show this giftee", giftee %>
+        <%= link_to giftee.name, giftee %>
       </p>
     <% end %>
   <% else %>
