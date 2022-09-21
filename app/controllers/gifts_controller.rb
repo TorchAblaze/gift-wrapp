@@ -1,5 +1,5 @@
 class GiftsController < ApplicationController
-  before_action :set_people, only: %i[ new create edit update ]
+  before_action :set_giftees, only: %i[ new create edit update ]
   before_action :set_gift, only: %i[ edit update show ]
   
   def index
@@ -65,8 +65,8 @@ class GiftsController < ApplicationController
     params[:gift].permit(:name, :price, :url, :giftee_id)
   end
 
-  def set_people
-    @people = Giftee.all.map { |p| [p.name, p.id] }
+  def set_giftees
+    @giftees = Giftee.all.map { |p| [p.name, p.id] }
   end
 
   def set_gift
