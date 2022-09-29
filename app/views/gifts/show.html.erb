@@ -3,3 +3,26 @@
 <% else %>
   <h1><%= @gift.name %></h1>
 <% end %>
+
+<p>Giftee: <%= link_to @gift.giftee.name, giftee_path(@gift.giftee.id), class: "giftees" %></p>
+<% if @gift.price %>
+  <p>Price: $<%= @gift.price %></p>
+<% end %>
+
+<br>
+
+<%= form_with model: @gift do |form| %>
+  <%= form.label :purchased, "Purchased" %>
+  <%= form.check_box :purchased %>
+<% end %>
+
+
+<br>
+<br>
+<div>
+  <%= link_to "Edit this gift", edit_gift_path(@gift) %> | 
+  <%= link_to "Back to gifts", gifts_path %>
+  <br>
+  <br>
+  <%= button_to "Delete gift", @gift, method: :delete, class: "btn btn-outline-dark" %>
+</div>
