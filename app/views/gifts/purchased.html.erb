@@ -4,12 +4,17 @@
   <% @gifts.each do |gift| %>
     <div>
       <p>
-        Gift: 
-          <span><%= link_to gift.name, gift_path(gift) %></span>
+        <span><%= link_to gift.name, gift_path(gift) %></span>
         for
-        <span><%= link_to gift.giftee.name, giftee_path(gift.giftee.id) %></span>
+        <span><%= link_to gift.giftee.name, giftee_path(gift.giftee.id), class: "giftees" %></span>
       </p>
     </div>
   <% end %>
 <% end %>
 
+<br>
+
+<div class="row">
+  <%= link_to "Add gift", new_gift_path, class: "btn btn-outline-danger col-md-4" %>
+  <%= link_to "Add giftee", new_giftee_path, class: "btn btn-outline-secondary col-md-4 offset-md-4"%>
+</div>

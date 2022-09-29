@@ -6,15 +6,10 @@
 
 <% if !@giftee.gifts.empty? %>
   <% @giftee.gifts.each do |gift| %>
-    <% if gift.url != "" %>
-      <div>
-        <a href="<%= gift.url %>" target="_blank"><p><%= gift.name %></p></a>
-      </div>
-    <% else %>
-      <div>
-        <p><%= gift.name %></p>
-      </div>
-    <% end %>
+    <p>
+      <span><%= link_to gift.name, gift_path(gift) %></span>
+      <span class="edit"><%= link_to "Edit", edit_gift_path(gift), class: "edit" %></span>
+    </p>
   <% end %>
 <% else %>
   <p>This giftee doesn't have any gifts yet! Click "Add gift" to create one.</p>
@@ -27,5 +22,5 @@
   <%= link_to "Back to giftees", giftees_path, class: "edit" %>
   <br>
   <br>
-  <%= button_to "Destroy this giftee", @giftee, method: :delete %>
+  <%= button_to "Delete giftee", @giftee, method: :delete, class: "btn btn-outline-dark" %>
 </div>

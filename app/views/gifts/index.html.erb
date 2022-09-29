@@ -6,10 +6,8 @@
       <p>
         <span><%= link_to gift.name, gift_path(gift) %></span>
       for
-        <span><%= gift.giftee.name %></span>
-        <span class="edit"><%= link_to "Edit", edit_gift_path(gift), class: "edit" %></span>
+        <span><%= link_to gift.giftee.name, giftee_path(gift.giftee.id), class: "giftees" %></span>
       </p>
-      
     </div>  
   <% end %>
 <% else %>
@@ -20,5 +18,5 @@
 
 <div class="row">
   <%= link_to "Add gift", new_gift_path, class: "btn btn-outline-danger col-md-4" %>
-  <%= link_to "Add giftee", new_giftee_path, class: "btn btn-outline-dark col-md-4 offset-md-4"%>
+  <%= link_to "Add giftee", new_giftee_path, class: "btn btn-outline-secondary col-md-4 offset-md-4"%>
 </div>
