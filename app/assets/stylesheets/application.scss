@@ -32,6 +32,10 @@ a:hover {
   text-decoration: underline;
 }
 
+.giftees, .giftees:hover {
+  color: #808080
+}
+
 .edit {
   color: rgb(146, 145, 145);
 }
@@ -63,6 +67,7 @@ span.edit {
 
 .nav-link:hover {
   color: #dc3545;
+  text-decoration: none;
 }
 
 .nav-pills .nav-link.active {
