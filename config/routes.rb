@@ -19,6 +19,10 @@ Rails.application.routes.draw do
 
   resources :giftee
 
+  # get "/contacts", to: "contacts#index", as: :contacts
+  # get "/contacts/:id", to: "contacts#show", as: :contact
+  resources :contacts, only: [:index, :show]
+
   # get "/people", to: "people#index"
   # get "/people/create", to: "people#create"
   # get "/people/:id", to: "people#show", as: :people_show

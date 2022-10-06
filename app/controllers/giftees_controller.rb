@@ -6,8 +6,18 @@ class GifteesController < ApplicationController
     @giftees = Giftee.all
   end
 
+  # GET /contacts or /contacts.json
+  def contacts
+    @giftees = Giftee.all
+  end
+
   # GET /giftees/1 or /giftees/1.json
   def show
+  end
+
+  # GET /contacts/1 or /contacts/1.json
+  def contact
+    @giftee = Giftee.find(params[:id])
   end
 
   # GET /giftees/new
