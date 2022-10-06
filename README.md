@@ -1,13 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h2>🎁 Welcome to Gift WrAPP 🎁</h2>
+<h3>My very first Ruby/Rails APP</h3>
 
-Things you may want to cover:
+<br>
 
-* Ruby version
+Gift Wrapp is an an app designed to help orgainze gift ideas for all your loved ones. 
 
-* System dependencies
+I used Miro and a mobile first approach to create frontend designs.
+
+* Ruby version: 3.1.2
+
+* System dependencies:
+  * bootstrap: 5.2.0
+  * jquery-rails
+  * popper_js: 2.11.5
 
 * Configuration
 
@@ -21,4 +28,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+<br>
+
+That's a wrAPP!
