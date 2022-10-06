@@ -1,0 +1,14 @@
+<h1>Contacts</h1>
+
+<div id="giftees">
+  <% if !@giftees.empty? %>
+    <% @giftees.each do |giftee| %>
+      <%= render giftee %>
+      <p>
+        <%= link_to giftee.name, contact_path(giftee) %>
+      </p>
+    <% end %>
+  <% else %>
+    <p>No giftees to contact yet! Add a giftee to get started.</p>
+  <% end %>
+</div>
