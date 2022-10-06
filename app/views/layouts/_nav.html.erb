@@ -2,4 +2,5 @@
   <%= link_to "Gifts", gifts_path, class: "nav-link #{current_page?(gifts_path) ? 'active' : nil}", id: "Gifts", datatoggle: "pill", role: "tab", ariacontrols: "Gifts" %>
   <%= link_to "Giftees", giftees_path, class: "nav-link #{current_page?(giftees_path) ? 'active' : nil}", id: "Giftees", datatoggle: "pill", role: "tab", ariacontrols: "Giftees" %>
   <%= link_to "Purchased", "/purchased", class: "nav-link #{current_page?("/purchased") ? 'active' : nil}", id: "Purchased", datatoggle: "pill", role: "tab", ariacontrols: "Purchased" %>
+  <%= link_to "Contacts", "/contacts", class: "nav-link #{current_page?("/contacts") ? 'active' : nil}", id: "Contacts", datatoggle: "pill", role: "tab", ariacontrols: "Contacts" %>
 </div>
