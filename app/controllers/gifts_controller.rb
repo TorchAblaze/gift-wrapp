@@ -62,7 +62,7 @@ class GiftsController < ApplicationController
   end
 
   def gift_params
-    params[:gift].permit(:name, :price, :url, :giftee_id)
+    params[:gift].permit(:name, :price, :url, :giftee_id, :purchased)
   end
 
   def set_giftees
