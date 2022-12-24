@@ -11,11 +11,21 @@
 
 <br>
 
+<%# Example 1 with button and form %>
 <%= form_with model: @gift do |form| %>
+  <%= form.hidden_field :id %>
+
   <%= form.label :purchased, "Purchased" %>
-  <%= form.check_box :purchased %>
+  <%= form.check_box :purchased, class: "checkbox-purchased" %>
+
+  <%= form.submit "Save" %>
 <% end %>
 
+<%# Example 2 (partial, not working) with Stimulus JS Controller %>
+<div data-controller="checkbox">
+  <label for="purchased">Purchased</label>
+  <input name="purchased" type="checkbox" data-action="change -> checkbox#update"/>
+</div>
 
 <br>
 <br>
