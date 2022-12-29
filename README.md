@@ -1,13 +1,13 @@
 # README
 
 <h2>🎁 Welcome to Gift WrAPP 🎁</h2>
-<h3>My very first Ruby/Rails APP</h3>
+<h3>🛤 My first Ruby/Rails APP</h3>
 
 <br>
 
 Gift Wrapp is an an app designed to help orgainze gift ideas for all your loved ones. 
 
-I used Miro and a mobile first approach to create frontend designs.
+I used [Miro](https://miro.com/app/board/uXjVOimIejU=/?share_link_id=659258480957) and a mobile first approach to create frontend designs.
 
 * Ruby version: 3.1.2
 
