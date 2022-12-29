@@ -13,10 +13,6 @@
 
  @import "bootstrap";
 
-.flex-sm-column {
-  color: #dc3545;
-}
-
 h1 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -32,33 +28,46 @@ a:hover {
   text-decoration: underline;
 }
 
+.app, .app:hover{
+  color: #dc3545;
+  font-size: 1.5rem;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.dark, .dark:hover {
+  color: black;
+}
+
 .giftees, .giftees:hover {
   color: #808080
 }
 
-.edit {
+.gray {
   color: rgb(146, 145, 145);
 }
 
-.edit:hover {
+.gray:hover {
   color: rgb(146, 145, 145);
   text-decoration: underline;
 }
 
-span.edit {
+span.gray {
   margin: 1rem;
 }
 
 .nav {
-  height: 100%;
-  width: fit-content;
-  position: absolute;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-right: 1rem;
-  display: inline-block;
+  background-color: #ff575761;
+  padding-left: 3%;
+}
+
+.nav-item {
+  padding-left: 3%;
 }
 
 .nav-link {
@@ -70,10 +79,7 @@ span.edit {
   text-decoration: none;
 }
 
-.nav-pills .nav-link.active {
+.nav-link.active {
   color: #dc3545;
-  border-radius: 0%;
-  border-left: .2rem solid #dc3545;
-  height: 2.5rem;
-  background-color: white;
+  text-decoration: underline;
 }

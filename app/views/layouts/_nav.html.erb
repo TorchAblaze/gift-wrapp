@@ -1,6 +1,15 @@
-<div class="nav flex-column nav-pills align-items-end" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-  <%= link_to "Gifts", gifts_path, class: "nav-link #{current_page?(gifts_path) ? 'active' : nil}", id: "Gifts", datatoggle: "pill", role: "tab", ariacontrols: "Gifts" %>
-  <%= link_to "Giftees", giftees_path, class: "nav-link #{current_page?(giftees_path) ? 'active' : nil}", id: "Giftees", datatoggle: "pill", role: "tab", ariacontrols: "Giftees" %>
-  <%= link_to "Purchased", "/purchased", class: "nav-link #{current_page?("/purchased") ? 'active' : nil}", id: "Purchased", datatoggle: "pill", role: "tab", ariacontrols: "Purchased" %>
-  <%= link_to "Contacts", "/contacts", class: "nav-link #{current_page?("/contacts") ? 'active' : nil}", id: "Contacts", datatoggle: "pill", role: "tab", ariacontrols: "Contacts" %>
-</div>
+
+<nav class="navbar navbar-expand-lg nav">
+  <a class="navbar-brand app" href="/">Gift WrAPP 🎁</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"><%= link_to "Gifts", gifts_path, class: "nav-link #{current_page?(gifts_path) ? 'active' : nil}", id: "Gifts", datatoggle: "pill", role: "tab", ariacontrols: "Gifts" %></li>
+      <li class="nav-item"><%= link_to "Giftees", giftees_path, class: "nav-link #{current_page?(giftees_path) ? 'active' : nil}", id: "Giftees", datatoggle: "pill", role: "tab", ariacontrols: "Giftees" %></li>
+      <li class="nav-item"><%= link_to "Purchased", "/purchased", class: "nav-link #{current_page?("/purchased") ? 'active' : nil}", id: "Purchased", datatoggle: "pill", role: "tab", ariacontrols: "Purchased" %></li>
+      <li class="nav-item"><%= link_to "Contacts", "/contacts", class: "nav-link #{current_page?("/contacts") ? 'active' : nil}", id: "Contacts", datatoggle: "pill", role: "tab", ariacontrols: "Contacts" %></li>
+    </ul>
+  </div> 
+</nav>
