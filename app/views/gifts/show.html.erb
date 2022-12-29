@@ -30,9 +30,10 @@
 <br>
 <br>
 <div>
-  <%= link_to "Edit this gift", edit_gift_path(@gift) %> | 
-  <%= link_to "Back to gifts", gifts_path %>
+  <%= link_to "Edit this gift", edit_gift_path(@gift), class: "btn btn-outline-secondary" %> | 
+  <%= link_to "Back to gifts", gifts_path, class: "btn btn-outline-dark" %>
   <br>
   <br>
-  <%= button_to "Delete gift", @gift, method: :delete, class: "btn btn-outline-dark" %>
+  <br>
+  <%= button_to "Delete gift", @gift, method: :delete, class: "btn btn-outline-danger" %>
 </div>
