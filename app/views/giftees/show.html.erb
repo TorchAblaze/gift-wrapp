@@ -2,14 +2,14 @@
 
 <%= render @giftee %>
 
-<h1><%= @giftee.name %></h1>
+<h1><%= link_to @giftee.name, contact_path(@giftee.id), class: "giftees" %></h1>
 
 <% if !@giftee.gifts.empty? %>
   <% @giftee.gifts.each do |gift| %>
-    <p>
-      <span><%= link_to gift.name, gift_path(gift) %></span>
-      <span class="edit"><%= link_to "Edit", edit_gift_path(gift), class: "edit" %></span>
-    </p>
+    <div class="row">
+      <span class="col"><%= link_to gift.name, gift_path(gift) %></span>
+      <span class="gray col"><%= link_to "Edit", edit_gift_path(gift), class: "gray" %></span>
+    </div>
   <% end %>
 <% else %>
   <p>This giftee doesn't have any gifts yet! Click "Add gift" to create one.</p>
@@ -18,9 +18,9 @@
 
 <br>
 <div>
-  <%= link_to "Edit this giftee", edit_giftee_path(@giftee), class: "edit" %> |
-  <%= link_to "Back to giftees", giftees_path, class: "edit" %>
+  <%= link_to "Edit this giftee", edit_giftee_path(@giftee), class: "btn btn-outline-secondary" %> |
+  <%= link_to "Back to giftees", giftees_path, class: "btn btn-outline-dark" %>
   <br>
   <br>
-  <%= button_to "Delete giftee", @giftee, method: :delete, class: "btn btn-outline-dark" %>
+  <%= button_to "Delete giftee", @giftee, method: :delete, class: "btn btn-outline-danger" %>
 </div>
