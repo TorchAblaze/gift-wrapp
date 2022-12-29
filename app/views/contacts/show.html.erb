@@ -1,5 +1,6 @@
-<h1><%= @giftee.name %>'s Contact Info</h1>
+<h1><%= link_to @giftee.name, giftee_path(@giftee.id), class: "giftees" %></h1>
 
+<h4>Contact Info</h4>
 <p><%= @giftee.phone_number %></p>
 <p><%= @giftee.email %></p>
 <p><%= @giftee.phone_number %></p>
