@@ -40,6 +40,10 @@ a:hover {
   font-weight: bold;
 }
 
+.btn {
+  margin-bottom: 1rem;
+}
+
 .btn:hover {
   text-decoration: none;
 }
@@ -49,7 +53,7 @@ a:hover {
 }
 
 .giftees, .giftees:hover {
-  color: #808080
+  color: rgb(89, 68, 68);
 }
 
 .gray {
