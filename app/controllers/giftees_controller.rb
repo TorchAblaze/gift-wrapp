@@ -6,18 +6,8 @@ class GifteesController < ApplicationController
     @giftees = Giftee.all
   end
 
-  # GET /contacts or /contacts.json
-  def contacts
-    @giftees = Giftee.all
-  end
-
   # GET /giftees/1 or /giftees/1.json
   def show
-  end
-
-  # GET /contacts/1 or /contacts/1.json
-  def contact
-    @giftee = Giftee.find(params[:id])
   end
 
   # GET /giftees/new
@@ -75,6 +65,6 @@ class GifteesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def giftee_params
-      params.fetch(:giftee).permit(:name, :email, :phone_number, :street_1, :street_2, :city, :state, :zipcode, :country)
+      params.fetch(:giftee).permit(:name, :email, :birthdate, :phone_number, :street_1, :street_2, :city, :state, :zipcode, :country)
     end
 end
