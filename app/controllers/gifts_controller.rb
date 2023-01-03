@@ -49,7 +49,7 @@ class GiftsController < ApplicationController
   def update
     respond_to do |format|
       if @gift.update(gift_params)
-        format.html { redirect_to gifts_url(@gift), notice: "Gift was successfully updated." }
+        format.html { redirect_to gift_url(@gift), notice: "Gift was successfully updated." }
         format.json { render :show, status: :ok, location: @gfit }
       else
         format.html { render :edit, status: :unprocessable_entity }
