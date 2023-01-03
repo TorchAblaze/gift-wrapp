@@ -18,6 +18,10 @@ h1 {
   margin-bottom: 2rem;
 }
 
+h3 {
+  text-decoration: underline;
+}
+
 a {
   color: #dc3545;
   text-decoration: none;
@@ -46,6 +50,10 @@ a:hover {
 
 .btn:hover {
   text-decoration: none;
+}
+
+.contact {
+  display: inline-block;
 }
 
 .dark, .dark:hover {
