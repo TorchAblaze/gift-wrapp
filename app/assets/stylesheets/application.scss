@@ -32,6 +32,10 @@ a:hover {
   text-decoration: underline;
 }
 
+.address {
+  display: inline-block;
+}
+
 .app, .app:hover{
   color: #dc3545;
   font-size: 1.5rem;
@@ -54,6 +58,7 @@ a:hover {
 
 .contact {
   display: inline-block;
+  margin-right: 1rem;
 }
 
 .dark, .dark:hover {
