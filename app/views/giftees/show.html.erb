@@ -4,6 +4,18 @@
 
 <h1><%= @giftee.name %></h1>
 
+<% if @giftee.street_1.present? || @giftee.street_2.present? || @giftee.city.present? || @giftee.state.present? || @giftee.zipcode.present? || @giftee.country.present? %>
+  <div class="contact">
+    <p class="bold">Address:</p>
+    <p><%= @giftee.street_1 %></p>
+    <p><%= @giftee.street_2 %></p>
+    <p class="address"><%= @giftee.city %></p>
+    <p class="address"><%= @giftee.state %></p>
+    <p class="address"><%= @giftee.zipcode %></p>
+    <p><%= @giftee.country %></p>
+  </div>
+<% end %>
+
 <% if @giftee.birthdate.present? %>
   <p class="contact"><span class="bold">Birthdate:</span> <%= @giftee.birthdate %></p>
 <% end %>
@@ -14,16 +26,6 @@
 
 <% if @giftee.phone_number.present? %>
   <p class="contact"><span class="bold">Phone Number:</span> <%= @giftee.phone_number %></p>
-<% end %>
-
-<% if @giftee.street_1.present? || @giftee.street_2.present? || @giftee.city.present? || @giftee.state.present? || @giftee.zipcode.present? || @giftee.country.present? %>
-  <p class="bold">Address:</p>
-  <p><%= @giftee.street_1 %></p>
-  <p><%= @giftee.street_2 %></p>
-  <p class="address"><%= @giftee.city %></p>
-  <p class="address"><%= @giftee.state %></p>
-  <p class="address"><%= @giftee.zipcode %></p>
-  <p><%= @giftee.country %></p>
 <% end %>
 
 <br>
@@ -41,8 +43,6 @@
   <p>This giftee doesn't have any gifts yet! Click "Add gift" to create one.</p>
 <% end %>
 
-
-<br>
 <div>
   <%= link_to "Edit this giftee", edit_giftee_path(@giftee), class: "btn btn-outline-secondary" %> |
   <%= link_to "Back to giftees", giftees_path, class: "btn btn-outline-dark" %>
