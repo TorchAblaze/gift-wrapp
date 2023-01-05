@@ -58,7 +58,9 @@ a:hover {
 
 .contact {
   display: inline-block;
-  margin-right: 1rem;
+  margin-right: 2rem;
+  vertical-align: top;
+  margin-bottom: 2rem;
 }
 
 .dark, .dark:hover {
@@ -103,4 +105,8 @@ span.gray {
 .nav-link.active {
   color: #dc3545;
   text-decoration: underline;
+}
+
+td {
+  padding-right: 7rem;
 }
