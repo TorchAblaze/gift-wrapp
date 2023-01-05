@@ -17,6 +17,10 @@
   </div>
 
   <div class="mb-3">
+    <%= form.label :birthdate, "Giftee birthdate:", class: "form-label"%>
+    <%= form.date_field :birthdate, class: "form-control" %>
+
+  <div class="mb-3">
     <%= form.label :phone_number, "Giftee phone number:", class: "form-label" %>
     <%= form.text_field :phone_number, class: "form-control" %>
   </div>
