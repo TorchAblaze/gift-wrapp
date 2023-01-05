@@ -40,23 +40,24 @@
     <%= form.text_field :street_2, class: "form-control" %>
   </div>
 
-  <div class="mb-3">
-    <%= form.label :city, "City:", class: "form-label" %>
-    <%= form.text_field :city, class: "form-control" %>
+  <div class="row">
+    <div class="mb-3 form-group col-md-8">
+      <%= form.label :city, "City:", class: "form-label" %>
+      <%= form.text_field :city, class: "form-control" %>
+    </div>
+    <div class="mb-3 form-group col-md-2">
+      <%= form.label :state, "State/Province:", class: "form-label" %>
+      <%= form.text_field :state, class: "form-control" %>
+    </div>
+
+    <div class="mb-3 form-group col-md-2">
+      <%= form.label :zipcode, "Zip or postal code:", class: "form-label" %>
+      <%= form.text_field :zipcode, class: "form-control" %>
+    </div>
   </div>
 
   <div class="mb-3">
-    <%= form.label :state, "State/Province", class: "form-label" %>
-    <%= form.text_field :state, class: "form-control" %>
-  </div>
-
-  <div class="mb-3">
-    <%= form.label :zipcode, "Zip or postal code", class: "form-label" %>
-    <%= form.text_field :zipcode, class: "form-control" %>
-  </div>
-
-  <div class="mb-3">
-    <%= form.label :country, "Country", class: "form-label" %>
+    <%= form.label :country, "Country:", class: "form-label" %>
     <%= form.text_field :country, class: "form-control" %>
   </div>
 
