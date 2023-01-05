@@ -1,20 +1,29 @@
 <h1>Gifts</h1>
 
-<% if !@gifts.empty? %>
-  <% @gifts.each do |gift| %>
-    <div>
-      <p>
-        <span><%= link_to gift.name, gift_path(gift) %></span>
-      for
-        <span><%= link_to gift.giftee.name, giftee_path(gift.giftee.id), class: "dark" %></span>
-      </p>
-    </div>  
-  <% end %>
-<% else %>
-  <p>No gifts yet! Add a gift idea to get started.</p>
-<% end %>
+<table>
+  <thead>
+    <tr>
+      <th>Gift</th>
+      <th>Giftee</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-<br>
+  <tbody>
+    <% if !@gifts.empty? %>
+      <% @gifts.each do |gift| %>
+        <tr>
+          <td><%= link_to gift.name, gift_path(gift) %></td>
+          <td><%= link_to gift.giftee.name, giftee_path(gift.giftee.id), class: "dark" %></td>
+          <td><%= gift.price %></td>
+        </tr>  
+      <% end %>
+    <% else %>
+      <p>No gifts yet! Add a gift idea to get started.</p>
+    <% end %>
+  </tbody>
+</table>
 
 <div class="row">
   <%= link_to "Add a gift", new_gift_path, class: "btn btn-danger col-md-4 btn-lg" %>
