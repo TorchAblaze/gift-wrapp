@@ -15,7 +15,7 @@
       <% @gifts.each do |gift| %>
         <tr>
           <td><%= link_to gift.name, gift_path(gift) %></td>
-          <td><%= link_to gift.giftee.name, giftee_path(gift.giftee.id), class: "dark" %></td>
+          <td><%= link_to gift.giftee.name, giftee_path(gift.giftee.id), class: "giftees" %></td>
           <td><%= gift.price %></td>
         </tr>  
       <% end %>
