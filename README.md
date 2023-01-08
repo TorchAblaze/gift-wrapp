@@ -28,6 +28,11 @@ I used [Miro](https://miro.com/app/board/uXjVOimIejU=/?share_link_id=65925848095
 
 * Deployment instructions
 
+* Resources
+  * [CSS-Tricks infinity shape and code editor](https://css-tricks.com/the-shapes-of-css/#aa-infinity-shape-via-nicolas-gallagher) for creating the button gift bows
+  * [Bootstrap documentation](https://getbootstrap.com/docs)
+  * [Miro](https://miro.com/app/board/uXjVOimIejU=/?share_link_id=659258480957)
+
 <br>
 
 That's a wrAPP!
