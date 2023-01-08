@@ -12,7 +12,7 @@
 
 <%= form_with model: gift do |form| %>
   <div class="mb-3">
-    <%= form.select :giftee_id, @giftees %>
+    <%= form.select :giftee_id, @giftees, {}, class: "form-select" %>
   </div>
   <br>
   <div class="mb-3">
