@@ -17,7 +17,16 @@
 
 <br>
 
+
 <div class="row">
-  <%= link_to "Add a gift", new_gift_path, class: "btn btn-danger col-md-4 btn-lg" %>
-  <%= link_to "Add a giftee", new_giftee_path, class: "btn btn-secondary col-md-4 offset-md-4 btn-lg" %>
+  <div class="col">
+    <div class="infinity">
+      <%= link_to "Add a gift", new_gift_path, class: "btn btn-danger md-4 btn-lg gift-box" %>
+    </div>
+  </div>
+  <div class="col">
+    <div class="infinity">
+      <%= link_to "Add a giftee", new_giftee_path, class: "btn btn-secondary md-4 offset-md-4 btn-lg gift-box" %>
+    </div>
+  </div>
 </div>
