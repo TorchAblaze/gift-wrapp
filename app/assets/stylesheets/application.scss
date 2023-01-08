@@ -48,8 +48,13 @@ a:hover {
   font-weight: bold;
 }
 
-.btn {
+.gift-box, .gift-box:hover {
   margin-bottom: 1rem;
+  padding-top: 1rem;
+  width: 6rem;
+  height: 6rem;
+  margin: 2rem -.5rem auto;
+  border: 4px solid black;
 }
 
 .btn:hover {
@@ -109,4 +114,35 @@ span.gray {
 
 td {
   padding-right: 7rem;
+}
+
+
+
+
+.infinity {
+  position: relative;
+  width: 80px;
+  height: 50px;
+  box-sizing: content-box;
+}
+.infinity:before,
+.infinity:after {
+  content: "";
+  box-sizing: content-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+  border-radius: 10px 50px 0 20px;
+  transform: rotate(-45deg);
+}
+.infinity:after {
+  left: auto;
+  right: 0;
+  border-radius: 50px 10px 20px 0;
+  transform: rotate(45deg);
 }
