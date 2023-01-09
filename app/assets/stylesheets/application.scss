@@ -36,12 +36,17 @@ a:hover {
   display: inline-block;
 }
 
-.app, .app:hover{
-  color: #dc3545;
+.app, .app:hover {
+  border-radius: 15px;
+  padding: .3rem;
+  background-color: #fa273c;
+  color: rgb(241, 232, 232);
+  border: 2px solid black;
   font-size: 1.5rem;
   &:hover {
     text-decoration: none;
   }
+  font-weight: bold;
 }
 
 .bold {
@@ -116,9 +121,7 @@ td {
   padding-right: 7rem;
 }
 
-
-
-
+// Gift Bow
 .infinity {
   position: relative;
   width: 80px;
