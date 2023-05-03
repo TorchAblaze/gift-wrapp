@@ -16,19 +16,21 @@
     <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div class="mb-3">
-    <%= form.label :birthdate, "Giftee birthdate:", class: "form-label"%>
-    <%= form.date_field :birthdate, class: "form-control" %>
-
-  <div class="mb-3">
-    <%= form.label :phone_number, "Giftee phone number:", class: "form-label" %>
-    <%= form.text_field :phone_number, class: "form-control" %>
+  <div class="row">
+    <div class="mb-3 form-group col-md-2">
+      <%= form.label :birthdate, "Giftee birthdate:", class: "form-label"%>
+      <%= form.date_field :birthdate, class: "form-control" %>
+    </div>
+    <div class="mb-3 form-group col-md-2">
+      <%= form.label :phone_number, "Giftee phone number:", class: "form-label" %>
+      <%= form.text_field :phone_number, class: "form-control" %>
+    </div>
+    <div class="mb-3 form-group col-md-8">
+      <%= form.label :email, "Giftee email:", class: "form-label" %>
+      <%= form.text_field :email, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="mb-3">
-    <%= form.label :email, "Giftee email:", class: "form-label" %>
-    <%= form.text_field :email, class: "form-control" %>
-  </div>
 
   <div class="mb-3">
     <%= form.label :street_1, "Street Address 1:", class: "form-label" %>
