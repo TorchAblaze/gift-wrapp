@@ -36,7 +36,9 @@
   <% @giftee.gifts.each do |gift| %>
     <div class="row">
       <span class="col"><%= link_to gift.name, gift_path(gift) %></span>
-      <span class="gray col"><%= link_to "Edit", edit_gift_path(gift), class: "gray" %></span>
+      <span class="col"><%= link_to "Edit", edit_gift_path(gift), class: "gray-edit" %></span>
+      <br>
+      <br>
     </div>
   <% end %>
 <% else %>
@@ -44,9 +46,9 @@
 <% end %>
 
 <div>
-  <%= link_to "Edit this giftee", edit_giftee_path(@giftee), class: "btn btn-outline-secondary" %> |
-  <%= link_to "Back to giftees", giftees_path, class: "btn btn-outline-dark" %>
   <br>
+  <%= link_to "Edit this giftee", edit_giftee_path(@giftee), class: "gray" %> |
+  <%= link_to "Back to giftees", giftees_path, class: "gray" %>
   <br>
   <br>
   <%= button_to "Delete giftee", @giftee, method: :delete, class: "btn btn-outline-danger" %>

@@ -53,6 +53,10 @@ a:hover {
   font-weight: bold;
 }
 
+.btn-outline-danger {
+  margin-bottom: 3rem;
+}
+
 .gift-box, .gift-box:hover {
   padding-top: 1rem;
   width: 6rem;
@@ -86,12 +90,16 @@ a:hover {
   color: rgb(90, 74, 74);
 }
 
+.gray-edit {
+  color: rgb(105, 104, 104);
+}
+
 .gray {
-  color: rgb(146, 145, 145);
+  color: rgb(105, 104, 104);
+  padding-bottom: 3rem;
 }
 
 .gray:hover {
-  color: rgb(146, 145, 145);
   text-decoration: underline;
 }
 

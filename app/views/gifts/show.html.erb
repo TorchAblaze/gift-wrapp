@@ -24,14 +24,14 @@
 <%# Example 2 (partial, not working) with Stimulus JS Controller %>
 <div data-controller="checkbox">
   <label for="purchased">Purchased</label>
-  <input name="purchased" type="checkbox" data-action="change -> checkbox#update"/>
+  <input name="purchased" type="checkbox" data-controller="checkbox" data-action="change -> checkbox#toggle"/>
 </div>
 
 <br>
 <br>
 <div>
-  <%= link_to "Edit this gift", edit_gift_path(@gift), class: "btn btn-outline-secondary" %> | 
-  <%= link_to "Back to gifts", gifts_path, class: "btn btn-outline-dark" %>
+  <%= link_to "Edit this gift", edit_gift_path(@gift), class: "gray" %> | 
+  <%= link_to "Back to gifts", gifts_path, class: "gray" %>
   <br>
   <br>
   <br>
