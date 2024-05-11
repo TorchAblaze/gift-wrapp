@@ -18,14 +18,18 @@
   <%= form.label :purchased, "Purchased" %>
   <%= form.check_box :purchased, class: "checkbox-purchased" %>
 
+  <br>
+  <br>
+  <br>
+
   <%= form.submit "Save" %>
 <% end %>
 
 <%# Example 2 (partial, not working) with Stimulus JS Controller %>
-<div data-controller="checkbox">
+<%# <div data-controller="checkbox">
   <label for="purchased">Purchased</label>
   <input name="purchased" type="checkbox" data-controller="checkbox" data-action="change -> checkbox#toggle"/>
-</div>
+</div> %>
 
 <br>
 <br>
